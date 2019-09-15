@@ -36,5 +36,15 @@ const requestHandler = (req,res) => {
     res.end();
 };
 
-module.exports = requestHandler;
+module.exports = requestHandler; //exports the request handler to app.js or server 
 
+// module.exports = {
+//     handler: requestHandler,
+//     someText: 'Some Hard coded Text'
+// };
+
+// module.exports.handler = requestHandler;
+// module.someText = 'Some hard coded text';
+
+// exports.handler = requestHandler;
+// someText = 'Some hard coded text';

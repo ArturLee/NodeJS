@@ -1,0 +1,27 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Node JS Course",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArturLee/NodeJS.git"
+  },
+  "author": "Artur Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArturLee/NodeJS/issues"
+  },
+  "homepage": "https://github.com/ArturLee/NodeJS#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
