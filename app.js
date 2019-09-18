@@ -1,19 +1,24 @@
-const http = require('http'); //could be any name
+const path = require('path');
 
 const express = require('express');
+const bodyparser= require('body-parser');
 
 const app = express();
 
-app.use((req,res,nxt) =>{
-    console.log('In the middleware');
-    nxt(); //allows the req to cont to the next function.
+app.set('view engine', 'pug');
+app.set('views','views');
+
+const adminData = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
+
+app.use(bodyparser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/admin',adminData.routes);
+app.use(shopRoutes);
+
+app.use((req,res,nxt)=>{
+    res.status(404).sendFile(path.join(__dirname,'views','404.html'));
 });
 
-app.use((req,res,nxt) =>{
-    console.log('In another middleware');
-    res.send(<h1>HEllo from express</h1>);
-});
-
-const server = http.createServer(app);
-
-server.listen(3000); 
+app.listen(3000); 
