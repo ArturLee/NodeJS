@@ -1,10 +1,10 @@
-<%- include('includes/head.ejs') %>
+<%- include('../includes/head.ejs') %>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/product.css">
 </head>
 
 <body>
-    <%- include('includes/navigation.ejs')%>
+    <%- include('../includes/navigation.ejs')%>
     <main>
         <main>
             <% if (prods.length >0){ %>
@@ -15,7 +15,7 @@
                             <h1 class="product__title"> <%= product.title %></h1>
                         </header>
                         <div class="card__image">
-                            <img src="https://cdn.pixabay.com/photo/2018/10/14/13/01/ruin-3746423_1280.jpg" alt="A Book">
+                            <img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiJyr6o36XlAhUuMewKHcDNBX0QjRx6BAgBEAQ&url=https%3A%2F%2Fthenewdaily.com.au%2Fmoney%2Fconsumer%2F2019%2F01%2F16%2Fmcdonalds-big-mac-trademark%2F&psig=AOvVaw2ImZjwDxSXK6nSofoOQTWP&ust=1571485869589032" alt="A Book">
                         </div>
                         <div class="card__content">
                             <h2 class="product__price">$19.99</h2>
@@ -34,4 +34,4 @@
             <% } %>
         </main>
     </main>
-<%- include('includes/end.ejs')%>
+<%- include('../includes/end.ejs')%>
