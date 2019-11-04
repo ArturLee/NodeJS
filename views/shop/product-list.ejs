@@ -15,12 +15,11 @@
                             <h1 class="product__title"> <%= product.title %></h1>
                         </header>
                         <div class="card__image">
-                            <img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiJyr6o36XlAhUuMewKHcDNBX0QjRx6BAgBEAQ&url=https%3A%2F%2Fthenewdaily.com.au%2Fmoney%2Fconsumer%2F2019%2F01%2F16%2Fmcdonalds-big-mac-trademark%2F&psig=AOvVaw2ImZjwDxSXK6nSofoOQTWP&ust=1571485869589032" alt="A Book">
+                            <img src="<%= product.image %>" alt="A Book">
                         </div>
                         <div class="card__content">
-                            <h2 class="product__price">$19.99</h2>
-                            <p class="product__description">A very interesting book about so many even more interesting
-                                things!
+                            <h2 class="product__price">€<%= product.price %></h2>
+                            <p class="product__description"><%= product.description %>
                             </p>
                         </div>
                         <div class="card__actions">
