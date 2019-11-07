@@ -5,10 +5,11 @@ const bodyparser= require('body-parser');
 //const expressHbs = require('express-handlebars');
 
 const errorController = require('./controllers/error');
+const db= require('./util/database');
 
 const app = express();
 
-
+db.execute('Select * from products').then().catch();
 //app.engine('handlebars', expressHbs({layoutsDir: 'views/layouts/', defaultLayout: 'main-layout'}));
 //app.set('view engine', 'handlebars');
 app.set('view engine', 'ejs');
