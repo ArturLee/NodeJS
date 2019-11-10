@@ -6,3 +6,4 @@
 - EJS 
 - ExpressJS
 - Using the Model-View-Controller (MVC) Pattern
+- MySQL
